@@ -1,1 +1,1 @@
-# site-md-cypress
+# cypress-treinamento
