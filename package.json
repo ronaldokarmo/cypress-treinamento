@@ -1,0 +1,21 @@
+{
+  "name": "cypress-treinamento",
+  "version": "1.0.0",
+  "description": "Cursos e Cypress Escola TAT",
+  "main": "index.js",
+  "scripts": {
+    "test:cy": "cypress open",
+    "test": "cypress run"
+  },
+  "keywords": [
+    "cypress",
+    "test",
+    "automation",
+    "e2e"
+  ],
+  "author": "Rcarmo",
+  "license": "MIT",
+  "dependencies": {
+    "cypress": "^6.2.1"
+  }
+}
