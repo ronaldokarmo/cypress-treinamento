@@ -1,6 +1,6 @@
 describe("Example testing API with Cypress.", () => {
 
-    it("API - Post /login - Login com sucesso.", () => {
+    it("API - Post /login - Login com sucesso, app ServeRest.", () => {
         cy.api({
             method: "POST",
             url: "/login",
@@ -18,7 +18,7 @@ describe("Example testing API with Cypress.", () => {
         })
     });
 
-    it("API - Post /login - Login com Senha Invalida.", () => {
+    it("API - Post /login - Login com Senha Invalida, app ServeRest.", () => {
         cy.api({
             method: "POST",
             url: "/login",
@@ -36,7 +36,7 @@ describe("Example testing API with Cypress.", () => {
         })
     });
 
-    it("API - Get /Usuarios - Listar todos os Usuários.", () => {
+    it("API - Get /Usuarios - Listar todos os Usuários, app ServeRest.", () => {
         cy.api({
             method: "GET",
             url: "/usuarios",
