@@ -1,0 +1,8 @@
+{
+    "id": 1,
+    "title": "Livro",
+    "description": "Um livro",
+    "pageCount": 0,
+    "excerpt": "string",
+    "publishDate": "2020-07-03T20:47:56.924Z"
+  }

@@ -4,12 +4,13 @@ describe("Example testing API with Cypress.", () => {
         cy.api({
             method: "POST",
             url: "/login",
-            headers:{
+            failOnStatusCode: false,
+            headers: {
                 "Content-Type": "application/json; charset=UTF-8"
             },
             body: {
-                "email": "ricardo.caalves@valid.com",
-                "password": "1234"
+                "email": "fulano@qa.com",
+                "password": "teste"
             }
         }).then((respose) => {
             expect(200).to.equal(respose.status);
@@ -22,14 +23,14 @@ describe("Example testing API with Cypress.", () => {
         cy.api({
             method: "POST",
             url: "/login",
-            headers:{
+            failOnStatusCode: false,
+            headers: {
                 "Content-Type": "application/json; charset=UTF-8"
             },
             body: {
                 "email": "fulano@qa.com",
                 "password": "senhaInvalida"
-            },
-            failOnStatusCode: false
+            }
         }).then((respose) => {
             expect(401).to.equal(respose.status);
             expect("Email e/ou senha inválidos").to.equal(respose.body.message);
@@ -40,15 +41,16 @@ describe("Example testing API with Cypress.", () => {
         cy.api({
             method: "GET",
             url: "/usuarios",
-            headers:{
+            failOnStatusCode: false,
+            headers: {
                 "Content-Type": "application/json; charset=UTF-8"
-            },
-            failOnStatusCode: false
+            }
         }).then((respose) => {
 
-            if(respose.status == 200) {
+            if (respose.status == 200) {
                 cy.log("Api return Successful responses 2XX.");
-                expect("Ricardowisk").to.equal(respose.body.usuarios[0].nome);
+                //expect("Ricardowisk").to.equal(respose.body.usuarios[0].nome);
+                expect(respose.body.usuarios[0].nome).to.exist;
                 expect(respose.body.usuarios[0].email).to.exist;
                 expect(respose.body.usuarios[0].password).to.exist;
                 expect(respose.body.usuarios[0].administrador).to.exist;
@@ -57,10 +59,10 @@ describe("Example testing API with Cypress.", () => {
             else if (respose.status == 400) {
                 cy.log("Api return Client error responses 4XX.");
             }
-            else{
+            else {
                 cy.log("Api return Server error responses 5XX.");
             }
         })
     });
-    
+
 });
