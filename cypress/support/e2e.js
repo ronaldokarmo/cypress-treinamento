@@ -15,6 +15,8 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+import './login_commands'
+import './buy_commands'
 import 'cypress-plugin-api'
 
 // Alternatively you can use CommonJS syntax:

@@ -1,6 +1,6 @@
 describe("Example testing API with Cypress.", () => {
 
-    it("API - Post /login - Fazer Login.", () => {
+    it("API - Post /login - Login com sucesso.", () => {
         cy.api({
             method: "POST",
             url: "/login",
@@ -8,8 +8,8 @@ describe("Example testing API with Cypress.", () => {
                 "Content-Type": "application/json; charset=UTF-8"
             },
             body: {
-                "email": "fulano@qa.com",
-                "password": "teste"
+                "email": "ricardo.caalves@valid.com",
+                "password": "1234"
             }
         }).then((respose) => {
             expect(200).to.equal(respose.status);
@@ -36,7 +36,7 @@ describe("Example testing API with Cypress.", () => {
         })
     });
 
-    it("API - Get /Usuarios - Listage de Usuários.", () => {
+    it("API - Get /Usuarios - Listar todos os Usuários.", () => {
         cy.api({
             method: "GET",
             url: "/usuarios",
@@ -48,7 +48,7 @@ describe("Example testing API with Cypress.", () => {
 
             if(respose.status == 200) {
                 cy.log("Api return Successful responses 2XX.");
-                expect("Fulano da Silva").to.equal(respose.body.usuarios[0].nome);
+                expect("Ricardowisk").to.equal(respose.body.usuarios[0].nome);
                 expect(respose.body.usuarios[0].email).to.exist;
                 expect(respose.body.usuarios[0].password).to.exist;
                 expect(respose.body.usuarios[0].administrador).to.exist;
