@@ -22,7 +22,7 @@
           "type": "string"
         }
       },
-      "additionalProperties": fasle,
+      "additionalProperties": false,
       "required": [
         "id",
         "title",
