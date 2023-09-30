@@ -1,9 +1,9 @@
 describe("Example testing API with Cypress.", () => {
 
-    it("Post /login - Fazer Login", () => {
+    it("API - Post /login - Fazer Login.", () => {
         cy.api({
             method: "POST",
-            url: "https://serverest.dev/login",
+            url: "/login",
             headers:{
                 "Content-Type": "application/json; charset=UTF-8"
             },
@@ -18,10 +18,10 @@ describe("Example testing API with Cypress.", () => {
         })
     });
 
-    it("Post /login - Login com Senha Invalida", () => {
+    it("API - Post /login - Login com Senha Invalida.", () => {
         cy.api({
             method: "POST",
-            url: "https://serverest.dev/login",
+            url: "/login",
             headers:{
                 "Content-Type": "application/json; charset=UTF-8"
             },
@@ -36,10 +36,10 @@ describe("Example testing API with Cypress.", () => {
         })
     });
 
-    it("Get /Usuarios - Listage de Usuários", () => {
+    it("API - Get /Usuarios - Listage de Usuários.", () => {
         cy.api({
             method: "GET",
-            url: "https://serverest.dev/usuarios",
+            url: "/usuarios",
             headers:{
                 "Content-Type": "application/json; charset=UTF-8"
             },
