@@ -20,7 +20,7 @@
         "type": "string"
       }
     },
-    "additionalProperties": true,
+    "additionalProperties": false,
     "required": [
       "id",
       "title",
@@ -28,5 +28,6 @@
       "pageCount",
       "excerpt",
       "publishDate"
-    ]
+    ],
+    "additionalItems": false
   }
