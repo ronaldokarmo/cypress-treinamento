@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@bahmutov/cy-api": "^2.2.6",
     "cypress": "^13.3.0"
   },
   "dependencies": {

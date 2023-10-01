@@ -18,6 +18,7 @@ import './commands';
 import './login_commands';
 import './buy_commands';
 import 'cypress-plugin-api';
+import '@bahmutov/cy-api'
 import chaiJsonSchema from 'chai-json-schema'; 
 chai.use(chaiJsonSchema);
 
