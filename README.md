@@ -1,2 +1,2 @@
-# curso-ypress
-Cursos básico de automação de testes com Cypress
+# cypress-treinamento
+Projeto de treinamento de automação de testes com Cypress
